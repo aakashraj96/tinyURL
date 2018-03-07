@@ -1,21 +1,26 @@
 {
   "development": {
-    "username": "vishalvasnani",
-    "password": null,
+    "username": "postgres",
+    "password": "aakash12",
     "database": "urldb",
     "host": "127.0.0.1",
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "pool": {
+      "max": 100,
+      "min": 1,
+      "acquire": 10000
+    }
   },
   "test": {
-    "username": "vishalvasnani",
-    "password": null,
+    "username": "postgres",
+    "password": "aakash12",
     "database": "urldb_test",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
-    "username": "vishalvasnani",
-    "password": null,
+    "username": "postgres",
+    "password": "aakash12",
     "database": "database_production",
     "host": "127.0.0.1",
     "dialect": "postgres"
