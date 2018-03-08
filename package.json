@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/.bin/jest --coverage --notify",
+    "test": "NODE_ENV=test sequelize db:migrate:undo:all && NODE_ENV=test sequelize db:migrate && node_modules/.bin/jest --coverage --notify",
     "start": "nodemon src/server.js",
     "migrate": "node_modules/.bin/sequelize db:migrate",
     "seed": "sequelize db:migrate:undo:all && sequelize db:migrate && sequelize db:seed:undo:all && sequelize db:seed:all",

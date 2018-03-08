@@ -10,9 +10,9 @@ describe('Test function recursiveCreate: ', () => {
   test('Should return the shorturl for new url: ', () => {
     const longUrl1 = 'http://newurl6';
     const hash = crypto.createHash('md5').update(longUrl1).digest('base64').replace(/\//g, '_');
-    console.log(hash);
+    // console.log(hash);
     const result = recursiveCreate(longUrl1, hash, 0, 6);
-    console.log(result);
+    // console.log(result);
     result.then((value) => {
       expect(value).toBe(hash.substr(0, 6));
     });
@@ -24,19 +24,17 @@ describe('Test function recursiveCreate: ', () => {
     const hash = '123456abcdef';
     // console.log(hash);
     const result = recursiveCreate(longUrl1, hash, 0, 6);
-    console.log(result);
+    // console.log(result);
     result.then((value) => {
-      console.log(value);
+      console.log('VALUE IS: ',value);
       expect(value).toBe(hash.substr(0, 6));
       const result2 = recursiveCreate(longUrl2, hash, 0, 6);
-      console.log(result2);
+      // console.log('VALUE2 IS: ',result2);
       result2.then((value1) => {
-        console.log(value1);
-        console.log(hash.substr(6, 12));
-        expect(value1).toBe(hash.substr(6, 12));
+        console.log('VALUE2 IS: ',value1);
+        expect(value).not.toBe(value1);
         done();
       });
     });
   });
 });
-
