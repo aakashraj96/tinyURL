@@ -2,7 +2,7 @@ const getHash = require('../helpers/getHash');
 
 const getLongURLs = () => {
   const longURLs = [];
-  for (let i = 0; i < 1e6; i += 1) {
+  for (let i = 0; i < 1e5; i += 1) {
     longURLs.push(`http://somerandomurl${i}`);
   }
   //   console.log(longURLs);

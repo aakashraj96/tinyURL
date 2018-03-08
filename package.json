@@ -12,12 +12,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "catbox": "^10.0.2",
+    "catbox-redis": "^4.1.0",
     "good": "7",
     "good-console": "6",
     "good-squeeze": "5",
     "hapi": "^16.6.3",
+    "nodemon": "^1.17.1",
     "pg": "^7.4.1",
     "pm2": "^2.10.1",
+    "redis": "^2.8.0",
     "sequelize": "^4.35.2",
     "sequelize-cli": "^4.0.0"
   },
