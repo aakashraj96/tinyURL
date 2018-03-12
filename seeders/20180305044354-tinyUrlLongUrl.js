@@ -6,7 +6,7 @@ module.exports = {
   up: (queryInterface, Sequelize) => {
     client.set("string key", "string val", redis.print);
     urlPair.forEach((url) => {
-      client.set(url.shorturl,url.longurl,redis.print);
+      client.set(url.shorturl,url.longurl);
     });
     return queryInterface.bulkInsert('urls', urlPair, {});
 
