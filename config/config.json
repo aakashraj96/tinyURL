@@ -3,7 +3,7 @@
     "username": "postgres",
     "password": "aakash12",
     "database": "urldb",
-    "host": "127.0.0.1",
+    "host": "18.216.201.174",
     "dialect": "postgres",
     "pool": {
       "max": 100,
