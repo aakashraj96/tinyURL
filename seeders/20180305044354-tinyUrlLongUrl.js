@@ -1,7 +1,9 @@
 const urlPair = require('../src/helpers/getUrls');
 const Models = require('../models');
 var redis = require("redis");
-    client = redis.createClient();
+    client = redis.createClient({
+      host:'18.219.220.22'
+    });
 module.exports = {
   up: (queryInterface, Sequelize) => {
     client.set("string key", "string val", redis.print);
