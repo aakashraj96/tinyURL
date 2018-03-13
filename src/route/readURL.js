@@ -1,7 +1,9 @@
 const Models = require('../../models');
 const redis = require("redis");
 
-const  client = redis.createClient();
+const  client = redis.createClient({
+  host:'18.219.220.22'
+});
   const handler = (request, reply) => {
 
   client.get(request.params.shorturl, function(err, data) {

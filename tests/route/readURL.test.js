@@ -3,7 +3,9 @@ const getHash = require('../../src/helpers/getHash');
 const Models = require('../../models');
 const redis = require("redis");
 
-const  client = redis.createClient();
+const  client = redis.createClient({
+  host:'18.219.220.22'
+});
 describe('Test server for route /read: ', () => {
   beforeAll(() => {
     Models.urls.create({
